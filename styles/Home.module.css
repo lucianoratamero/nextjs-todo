@@ -83,6 +83,7 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
+  position: relative;
 }
 
 .card:hover,
@@ -101,6 +102,24 @@
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
+}
+
+.card label:not(:first-child), .card input:not([type=checkbox]) {
+  display: block;
+}
+
+.card label, .card button {
+  margin-top: 1rem;
+}
+
+.loading-overlay {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: #fafafa;
+  opacity: 0.4;
 }
 
 .logo {
